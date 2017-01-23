@@ -1,0 +1,42 @@
+<div class="loading" ng-show="loading">
+	<img src="images/hourglass.gif" alt="Loading image" />
+	<h3>loading the planets information</h3>
+</div>
+<section ng-if="loaded">
+	<div ng-repeat="planet in planets">
+		<div class="card" ng-class="planet.show?'open':''" ng-attr-id="{{planet.name | lowercase}}">
+		  <div class="card-block card-block-title" ng-click="toggle(planet)">
+			  	<h3 class="card-title">{{planet.name}}</h3>
+				<i class="fa fa-chevron-up" aria-hidden="true" ng-show="planet.show"></i>
+				<i class="fa fa-chevron-down" aria-hidden="true"  ng-hide="planet.show"></i>
+		  </div>
+		  <div class="card-block card-block-body" ng-show="planet.show">
+			  <div class="row">
+				<div class="col col-md-6">
+					<img class="img-responsive" ng-src="images/{{planet.image}}"/>
+				</div>
+				<div class="col col-md-6" >
+				  <table class="table" width="100%">
+	  					<tbody>
+	  						<tr>
+	  							<th width="50%">Distance</th>
+	  							<td width="50%">{{planet.distance}} AU from the Sun</td>
+	  						</tr>
+	  						<tr>
+	  							<th width="50%">Mass</th>
+	  							<td width="50%">{{planet.mass}} Earth masses</td>
+	  						</tr>
+	  						<tr>
+	  							<th width="50%">Diameter</th>
+	  							<td width="50%">{{planet.diameter}} km</td>
+	  						</tr>
+	  				</table>
+				</div>
+				<div class="col col-md-6">
+					<p>{{planet.description}}</p>
+				</div>
+			</div>
+		  </div>
+		</div>
+	</div>
+</section>

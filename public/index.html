@@ -1,0 +1,25 @@
+<!doctype html>
+<html ng-app="planets">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/lib/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/lib/font-awesome-4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/app/planets.css"/>
+    <script src="js/lib/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-resource.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.min.js"></script>
+    <script src="js/app/planets.module.js"></script>
+    <script src="js/app/planetsService.service.js"></script>
+    <script src="js/app/routeProvider.config.js"></script>
+    <script src="js/app/locationProvider.config.js"></script>
+    <script src="js/app/PlanetListController.controller.js"></script>
+  </head>
+  <body>
+	<div class="container">
+		<header class="jumbotron">
+			<h1 class="text-center">THE PLANETS</h1>
+		</header>
+        <div ng-view></div>
+	</div>
+  </body>
+</html>

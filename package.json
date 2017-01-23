@@ -1,0 +1,22 @@
+{
+  "name": "planets",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {},
+  "dependencies": {
+    "debug": "~2.2.0",
+    "dotenv": "^2.0.0",
+    "express": "~4.13.4",
+    "jade": "~1.11.0"
+  },
+  "devDependencies": {
+    "angular": "^1.6.1",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "jquery": "^1.9.1"
+  },
+  "description": "Planets demo using angular 1.6",
+  "main": "server.js",
+  "author": "Ross Tyler",
+  "license": "ISC"
+}
